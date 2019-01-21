@@ -380,3 +380,5 @@ dmypy.json
 
 ### Python Patch ###
 .venv/
+
+*.txt
